@@ -1,8 +1,8 @@
 package com.pichlera.pos1.test.firststeps.service;
 
 import com.pichlera.pos1.test.firststeps.model.Article;
-import com.pichlera.pos1.test.firststeps.repository.ArticleRespository;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.pichlera.pos1.test.firststeps.repository.ArticleMemRepository;
+import com.pichlera.pos1.test.firststeps.repository.ArticleRepository;
 import org.springframework.stereotype.Service;
 import java.util.Optional;
 
@@ -10,10 +10,11 @@ import java.util.Optional;
 @Service
 public class MyServiceImpl implements MyFirstService {
 
-    @Autowired
-    private ArticleRespository articleRespo;
 
-    public MyServiceImpl(ArticleRespository articleRespo) {
+    private ArticleRepository articleRespo;
+
+
+    public MyServiceImpl(ArticleMemRepository articleRespo) {
         this.articleRespo = articleRespo;
     }
 

@@ -4,10 +4,11 @@ import com.pichlera.pos1.test.firststeps.model.Article;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Component;
 
+
 import java.util.Optional;
 
 @Component
-public class ArticleRespository implements CrudRepository<Article, Long> {
+public class ArticleMemRepository implements ArticleRepository {
 
 
     @Override
